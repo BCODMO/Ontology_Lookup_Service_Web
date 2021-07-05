@@ -1,34 +1,194 @@
-name: OBO Foundry
-title: The OBO Foundry
-markdown: kramdown
-highlighter: rouge
-baseurl: /
-imgurl: /images
-repo: https://github.com/OBOFoundry/OBOFoundry.github.io/
-repo_src: https://github.com/OBOFoundry/OBOFoundry.github.io/blob/master/
-author:
-  name: OBO Technical WG
+# name: OBO Foundry
+# title: The OBO Foundry
+# markdown: kramdown
+# highlighter: rouge
+# baseurl: /
+# imgurl: /images
+# repo: https://github.com/OBOFoundry/OBOFoundry.github.io/
+# repo_src: https://github.com/OBOFoundry/OBOFoundry.github.io/blob/master/
+# author:
+#   name: OBO Technical WG
+# ontologies:
+# - activity_status: active
+#   build: {checkout: 'git clone https://github.com/EBISPOT/duo.git', path: ., system: git}
+#   contact: {email: mcourtot@gmail.com, github: mcourtot, label: Melanie Courtot}
+#   dependencies:
+#     - {id: iao}
+#     - {id: bfo}
+#   description: DUO is an ontology which represent data use conditions.
+#   homepage: https://github.com/EBISPOT/DUO
+#   id: duo
+#   jobs:
+#     - {id: 'https://travis-ci.org/EBISPOT/DUO', type: travis-ci}
+#   layout: ontology_detail
+#   license: {label: CC-BY, logo: 'http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png',
+#             url: 'http://creativecommons.org/licenses/by/3.0/'}
+#   ontology_purl: http://purl.obolibrary.org/obo/duo.owl
+#   products:
+#     - {id: duo.owl, ontology_purl: 'http://purl.obolibrary.org/obo/duo.owl'}
+#   title: The Data Use Ontology
+#   tracker: https://github.com/EBISPOT/DUO/issues
+#   preferred_root_term:
+#     - http://purl.obolibrary.org/obo/DUO_0000001
+#     - http://purl.obolibrary.org/obo/DUO_0000017
+#     - http://purl.obolibrary.org/obo/OBI_0000066
+
 ontologies:
+
+#### Biology
+
+## anatomy
 - activity_status: active
-  build: {checkout: 'git clone https://github.com/EBISPOT/duo.git', path: ., system: git}
-  contact: {email: mcourtot@gmail.com, github: mcourtot, label: Melanie Courtot}
-  dependencies:
-    - {id: iao}
-    - {id: bfo}
-  description: DUO is an ontology which represent data use conditions.
-  homepage: https://github.com/EBISPOT/DUO
-  id: duo
-  jobs:
-    - {id: 'https://travis-ci.org/EBISPOT/DUO', type: travis-ci}
+  description: "The BCO-SM biology-anatomy module"
+  id: anatomy
   layout: ontology_detail
-  license: {label: CC-BY, logo: 'http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png',
-            url: 'http://creativecommons.org/licenses/by/3.0/'}
-  ontology_purl: http://purl.obolibrary.org/obo/duo.owl
-  products:
-    - {id: duo.owl, ontology_purl: 'http://purl.obolibrary.org/obo/duo.owl'}
-  title: The Data Use Ontology
-  tracker: https://github.com/EBISPOT/DUO/issues
-  preferred_root_term:
-    - http://purl.obolibrary.org/obo/DUO_0000001
-    - http://purl.obolibrary.org/obo/DUO_0000017
-    - http://purl.obolibrary.org/obo/OBI_0000066
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/biology/anatomy.owl
+  title: Biology-Anatomy
+  preferredPrefix: BIO-ANA
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## biomolecules
+- activity_status: active
+  description: "The BCO-SM biology-biomolecules module"
+  id: biomolecules
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/biology/biomolecules.owl
+  title: Biology-Biomolecules
+  preferredPrefix: BIO-ANA
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## ecology
+- activity_status: active
+  description: "The BCO-SM biology-ecology module"
+  id: ecology
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/biology/ecology.owl
+  title: Biology-Ecology
+  preferredPrefix: BIO-ECO
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## organism
+- activity_status: active
+  description: "The BCO-SM biology-organism module"
+  id: organism
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/biology/organism.owl
+  title: Biology-Organism
+  preferredPrefix: BIO-ORG
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## physiology
+- activity_status: active
+  description: "The BCO-SM biology-physiology module"
+  id: physiology
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/biology/physiology.owl
+  title: Biology-Physiology
+  preferredPrefix: BIO-PHY
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+#### Chemistry
+
+## compound
+- activity_status: active
+  description: "The BCO-SM chemistry-compound module"
+  id: compound
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/chemistry/compound.owl
+  title: Chemistry-Compound
+  preferredPrefix: CHEM-COM
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## element
+- activity_status: active
+  description: "The BCO-SM chemistry-element module"
+  id: element
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/chemistry/element.owl
+  title: Chemistry-Element
+  preferredPrefix: CHEM-ELE
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+#### Matrix
+
+## biome
+- activity_status: active
+  description: "The BCO-SM matrix-biome module"
+  id: biome
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/matrix/biome.owl
+  title: Matrix-Biome
+  preferredPrefix: MATRIX-BIO
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## material
+- activity_status: active
+  description: "The BCO-SM matrix-material module"
+  id: material
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/matrix/material.owl
+  title: Matrix-Material
+  preferredPrefix: MATRIX-MAT
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## context
+- activity_status: active
+  description: "The BCO-SM matrix-context module"
+  id: context
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/matrix/context.owl
+  title: Matrix-Context
+  preferredPrefix: MATRIX-CON
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## region
+- activity_status: active
+  description: "The BCO-SM matrix-region module"
+  id: region
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/matrix/region.owl
+  title: Matrix-Region
+  preferredPrefix: MATRIX-MAT
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+#### operational
+- activity_status: active
+  description: "The BCO-SM operational module"
+  id: operational
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/operational/operational.owl
+  title: Operational
+  preferredPrefix: OP
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+#### Physics
+
+## characteristic
+- activity_status: active
+  description: "The BCO-SM physics-characteristic module"
+  id: characteristic
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/physics/characteristic.owl
+  title: Physics-Characteristic
+  preferredPrefix: PHYSICS-CHA
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+## phenomenon
+- activity_status: active
+  description: "The BCO-SM physics-phenomenon module"
+  id: phenomenon
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/physics/phenomenon.owl
+  title: Physics-Phenomenon
+  preferredPrefix: PHYSICS-PHE
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
+
+#### quantifiers
+- activity_status: active
+  description: "The BCO-SM quantifiers module"
+  id: quantifiers
+  layout: ontology_detail
+  ontology_purl: https://raw.githubusercontent.com/BCODMO/bcodmont/main/src/ontology/BCODMO_SM/quantifiers/quantifiers.owl
+  title: Quantifiers
+  preferredPrefix: QUANT
+  label_property: http://purl.obolibrary.org/obo/IAO_0000111
